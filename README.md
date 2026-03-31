@@ -39,9 +39,8 @@ project/
 
 
 1.Clone Repository
-git clone 
-cd project
-
+git clone https://github.com/BabuShaik778/forecast_task.git
+cd forecast_task
 
 2.Install Dependencies
 pip install 
