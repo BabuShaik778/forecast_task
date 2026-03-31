@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Forecast App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="card">
+            <h2>📈 Price Forecast</h2>
+            <form id="predictForm">
+                <label>Month:</label>
+                <input type="number" name="month" min="1" max="12" required>
+                
+                <label>Year:</label>
+                <input type="number" name="year" required>
+                
+                <label>Model:</label>
+                <select name="model">
+                    <option value="xgb">XGBoost</option>
+                    <option value="lstm">LSTM</option>
+                </select>
+                
+                <button type="submit">Predict</button>
+            </form>
+            <div id="result"></div>
+        </div>
+
+        <div class="card">
+            <h3>Forecast Chart</h3>
+            <canvas id="forecastChart"></canvas>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
